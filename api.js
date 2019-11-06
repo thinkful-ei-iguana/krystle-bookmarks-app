@@ -1,12 +1,7 @@
 let api = (function() {
     const BASE_URL = 'https://thinkful-list-api.herokuapp.com/krystle/bookmarks';
-  
-   
-     /**
-   * 
-   * 
-   * @param  {...any} args 
-   */
+ 
+
   function apiFetch(...args) {
     let error;
     return fetch(...args)
@@ -26,11 +21,7 @@ let api = (function() {
       });
   }
 
-  /**
-   * 
-   * @param {string} url 
-   * @returns {string}
-   */
+
   function verifyHTTPS(url) {
     if (!/^(f|ht)tps?:\/\//.test(url)) {
       url = 'http://' + url;

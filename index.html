@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bookmarks App</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookmarks App</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
 </head>
-
-</header>
-
 <body>
+  <h1>
+    Bookmarks App
+  </h1>
+  <main>
+    <section id="formSection">
+      <form id="addBookmarkForm" name="bookmarkForm">
+        <label for="siteName">Site Name: </label><br>
+        <input id="siteName" name="title" placeholder="Enter Site Name" ><br>
+        <label for="siteUrl">Site URL: </label><br>
+        <input id="siteUrl" name="url" placeholder="http://" ><br>
 
-         <section class="bookmarks">
-      
-            <body>
-                <header>
-                  <h1>My Bookmarks</h1>
-                  <div>
-                    <button class="add-new">+ New</button>
-                    <select class="filter" name="filter">
-                      <option value="">Filter by minimum rating</option>
-                      <option value="5">5</option>
-                      <option value="4">4</option>
-                      <option value="3">3</option>
-                      <option value="2">2</option>
-                      <option value="1">1</option>
-                    </select>
-                  </div>
-                </header>
-                <main>
-              
-                </main>
-                <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-                <script type="module" src="index.js"></script>
-              </body>
-              </html>
+        <label for="siteDesc">Site Description:</label><br>
+        <textarea id="siteDesc" name="desc" placeholder="Add Description."></textarea><br>
+
+        <section class="siteRating">
+          <input type="radio" class="rating" id="rating5" name="rating" value="5"/>
+          <label class="fa fa-star checked" for="rating5"></label>
+          <input type="radio" class="rating" id="rating4" name="rating" value="4"/>
+          <label class="fa fa-star checked" for="rating4"></label>
+          <input type="radio" class="rating" id="rating3" name="rating" value="3"/>
+          <label class="fa fa-star checked" for="rating3"></label>
+          <input type="radio" class="rating" id="rating2" name="rating" value="2"/>
+          <label class="fa fa-star checked" for="rating2"></label>
+          <input type="radio" class="rating" id="rating1" name="rating" value="1"/>
+          <label class="fa fa-star checked" for="rating1"></label>
+          <p>Site Rating:&nbsp</p>
         </section>
-     
-    </main>
-    <footer>
 
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="index.js"></script>  
-    <script src="store.js"></script>  
+        <section class="edit-delete-section">
+          <button type="submit" value="Add Bookmark">Submit</button>
+          <!-- <button type="button">Cancel</button> -->
+          <button id="resetButton" type="reset">Cancel</button>  
+        </section>
+      </form>
+    </section>
+    <section id="filterSection">
+      <label for="filterByRating">Show:</label>
+      <select id="filterByRating">
+        <option value=0>All</option>
+        <option value=1>>= 1</option>
+        <option value=2>>= 2</option>
+        <option value=3>>= 3</option>
+        <option value=4>>= 4</option>
+        <option value=5>5</option>
+      </select>  
+    </section>
+    <section id="errorSection"></section>
+    <ul id="bookmark-list">
+    </ul>
+  </main>
+
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/store.js"></script>
+  <script src="scripts/bookmarks.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>

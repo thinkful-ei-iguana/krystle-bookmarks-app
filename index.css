@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: plum;
+}
+
+form input, textarea {
+  width: 100%;
+}
+form input {
+  height: 25px;
+  padding: 5px;
+}
+form button {
+  margin: 0;
+  width: 45%;
+}
+form textarea {
+  height: 50px;
+ 
+}
+
+p {
+  margin: 0;
+}
+
+#formSection, .bookmark-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  width: 300px;
+  margin: 5px;
+  padding: 10px;
+}
+@media only screen and (min-width: 700px) {
+  #formSection, .bookmark-list-item {
+    width: 600px;
+  }
+}
+
+section form {
+  width: 100%;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+li form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.expandedArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.edit-delete-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.edit-delete-section button {
+  width: 45%;
+}
+.hidden {
+  display: none;
+}
+
+
+.siteRating{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.rating {
+  display: none;
+}
+.rating:checked ~ label {
+  color: purple;
+}
+.checked {
+  margin: 0;
+  color: black;
+}
+.checked:hover,
+.checked:hover ~ .checked:before {
+  color: purple;
+}
+.star {
+  color: purple;
+}

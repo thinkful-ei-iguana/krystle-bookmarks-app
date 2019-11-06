@@ -42,7 +42,7 @@ let api = (function() {
     (newBookmark.desc && newBookmark.desc !== null) ? Object.assign(bookmark, { desc: newBookmark.desc }) : bookmark;
     newBookmark.rating ? Object.assign(bookmark, { rating: newBookmark.rating }) : bookmark;
 
-    return apiFetch(`${BASE_URL}/bookmarks`, {
+    return apiFetch(`${BASE_URL}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -52,11 +52,11 @@ let api = (function() {
   }
 
   function getBookmarks() {
-    return apiFetch(`${BASE_URL}/bookmarks`);
+    return apiFetch(`${BASE_URL}`);
   }
 
   function updateBookmark(id, updateData) {
-    return apiFetch(`${BASE_URL}/bookmarks/${id}`, {
+    return apiFetch(`${BASE_URL}/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ let api = (function() {
   }
 
   function deleteBookmark(id) {
-    return apiFetch(`${BASE_URL}/bookmarks/${id}`, {
+    return apiFetch(`${BASE_URL}/${id}`, {
       method: 'DELETE',
     });
   }

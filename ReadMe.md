@@ -2,7 +2,8 @@ Krystle's Bookmarks App
 
 Bookmark's app that allows you to create a list of your favorite websites, and sort them by rating. 
 
-#User Stories
+User Stories
+
 As a user:
 I can add bookmarks to my bookmark list.
 I can see a list of my bookmarks when I first open the app.

@@ -26,15 +26,15 @@
 
         <section class="siteRating">
           <input type="radio" class="rating" id="rating5" name="rating" value="5"/>
-          <label class="fa fa-star checked" for="rating5"></label>
+          <label class="fa fa-star checked" for="rating5">☆</label>
           <input type="radio" class="rating" id="rating4" name="rating" value="4"/>
-          <label class="fa fa-star checked" for="rating4"></label>
+          <label class="fa fa-star checked" for="rating4">☆</label>
           <input type="radio" class="rating" id="rating3" name="rating" value="3"/>
-          <label class="fa fa-star checked" for="rating3"></label>
+          <label class="fa fa-star checked" for="rating3">☆</label>
           <input type="radio" class="rating" id="rating2" name="rating" value="2"/>
-          <label class="fa fa-star checked" for="rating2"></label>
+          <label class="fa fa-star checked" for="rating2">☆</label>
           <input type="radio" class="rating" id="rating1" name="rating" value="1"/>
-          <label class="fa fa-star checked" for="rating1"></label>
+          <label class="fa fa-star checked" for="rating1">☆</label>
           <p>Site Rating:&nbsp</p>
         </section>
 
@@ -62,9 +62,10 @@
   </main>
 
   <script src="jquery-3.4.1.min.js"></script>
-  <script src="scripts/api.js"></script>
-  <script src="scripts/store.js"></script>
-  <script src="scripts/bookmarks.js"></script>
-  <script src="scripts/index.js"></script>
+  <script src="api.js"></script>
+  <script src="store.js"></script>
+  <script src="bookmarks.js"></script>
+  <!-- <script src="index.js"></script> -->
+  <script>bookmarks.attachEventListeners()</script>
 </body>
 </html>

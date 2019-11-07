@@ -2,7 +2,13 @@ let api = (function() {
     const BASE_URL = 'https://thinkful-list-api.herokuapp.com/krystle/bookmarks';
  
 
-  function apiFetch(...args) {
+   /**
+   * DRY's fetch  calls and checks for potential errors
+   * 
+   * @param  {...any} args 
+   */
+  
+   function apiFetch(...args) {
     let error;
     return fetch(...args)
       .then(res => {

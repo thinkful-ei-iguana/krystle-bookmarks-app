@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
+
 'use strict';
-/* global api, store */
+
 
 const bookmarks = (function(){
 
@@ -133,7 +133,7 @@ const bookmarks = (function(){
 
   function handleAddBookmarkSubmit() {
     document.getElementById('addBookmarkForm').addEventListener('submit', event => {
-      event.preventDefault();
+      event.preventDefault(); 
       
       const newBookmark = serializeJSON(event.target);
       console.log(newBookmark);

@@ -118,7 +118,7 @@ const bookmarks = (function(){
   }
 
   function renderError() {
-    // console.log('rendering error');
+   ;
     let error = '';
     if (store.showError) {
       error = `<div class="error-message-box">

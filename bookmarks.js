@@ -56,7 +56,7 @@ const bookmarks = (function(){
       `<p>${bookmark.desc !== null ? bookmark.desc : ''}</p>` ;
     const bookmarkUrl = isEditing ?
       `<input name="url" value="${bookmark.url}" />`:
-      `<a href="${bookmark.url}">Link Here</a><br>`;
+      `<a target="_blank" href="${bookmark.url}">Link Here</a><br>`;
     const editButton = isEditing ?
       `<button id="${bookmark.id}submitEditButton" type="submit" value="submit">Submit</button>` :
       `<button id="${bookmark.id}editButton" type="button">Edit</button>`;
